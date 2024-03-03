@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cryptocurrency Dashboard</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+  <input type="text" id="searchInput" placeholder="Search By Name or Symbol" class="search-box">
+  <button id="searchButton" class="search-button">Search</button>
+  <button id="sortMarketCapButton" class="sort-button">Sort By Mkt Cap</button>
+  <button id="sortPercentageButton" class="sort-button">Sort by percentage</button>
+
+  <table id="cryptoTable">
+    <thead>
+      <tr>
+        <th>Coin</th>
+        <th>Symbol</th>
+        <th>Price</th>
+        <th>Volume</th>
+        <th>Change</th>
+        <th>Market Cap</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody">
+      <!-- Data will be inserted here -->
+    </tbody>
+  </table>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
