@@ -15,12 +15,21 @@ body, html {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   }
   
+  .controls {
+    display: flex; /* This will align the child elements in a row */
+    gap: 10px; /* This adds space between the child elements */
+    align-items: center; /* This will vertically align the child elements if they are of different heights */
+    margin-bottom: 20px; /* This adds some space below the controls */
+  }
+
   .search-box, .search-button, .sort-button {
     margin-bottom: 10px;
   }
   
   .search-box {
     padding: 10px;
+    flex-grow: 1; /* This will allow the search box to grow and fill the space */
+    margin-right: 10px;
     border: 1px solid #555; /* Add a border to make the input visible on a black background */
     background: #333; /* Dark background for the input field */
     color: #ffffff; /* Text color for the input field */
@@ -31,7 +40,8 @@ body, html {
   
   .search-button, .sort-button {
     padding: 10px 20px;
-    border: none;
+    white-space: nowrap;
+    border: white;
     border-radius: 4px;
     background-color: #4CAF50; /* Primary action color */
     color: #ffffff;
@@ -68,10 +78,18 @@ body, html {
   }
   
   .coin-image {
-    width: 25px; /* Size of the coin image */
-    height: 25px; /* Make the image square */
+    width: 30px; /* Size of the coin image */
+    height: 30px; /* Make the image square */
     object-fit: cover; /* This will ensure the image covers the whole area */
     margin-right: 10px; /* Space between the image and the text */
+  }
+  
+  .price-change-positive {
+    color: green;
+  }
+  
+  .price-change-negative {
+    color: red;
   }
   
   /* Responsive table styles */

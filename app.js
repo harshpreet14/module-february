@@ -27,15 +27,18 @@ function fetchDataThen() {
     tableBody.innerHTML = ''; // Clear existing table data
   
     data.forEach(item => {
+
+        const priceChangeClass = item.price_change_percentage_24h < 0 ? 'price-change-negative' : 'price-change-positive'
+
       const row = `
-        <tr>
-          <td><img src="${item.image}" alt="${item.name}" class="coin-image"/>${item.name}</td>
-          <td>${item.symbol.toUpperCase()}</td>
-          <td>$${item.current_price.toLocaleString()}</td>
-          <td>${item.total_volume.toLocaleString()}</td>
-          <td>${item.price_change_percentage_24h.toFixed(2)}%</td>
-          <td>${item.market_cap.toLocaleString()}</td>
-        </tr>
+    <tr>
+      <td><img src="${item.image}" alt="${item.name}" class="coin-image"/>${item.name}</td>
+      <td>${item.symbol.toUpperCase()}</td>
+      <td>$${item.current_price.toLocaleString()}</td>
+      <td>$${item.total_volume.toLocaleString()}</td> <!-- Added $ prefix here -->
+      <td class="${priceChangeClass}">${item.price_change_percentage_24h.toFixed(2)}%</td>
+      <td>Mkt Cap: $${item.market_cap.toLocaleString()}</td> <!-- Added Mkt Cap: prefix here -->
+    </tr>
       `;
       tableBody.innerHTML += row;
     });
