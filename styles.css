@@ -41,9 +41,9 @@ body, html {
   .search-button, .sort-button {
     padding: 10px 20px;
     white-space: nowrap;
-    border: white;
+    border: 1px solid white;
     border-radius: 4px;
-    background-color: #4CAF50; /* Primary action color */
+    background-color: #121212; /* Primary action color */
     color: #ffffff;
     cursor: pointer;
   }
@@ -83,7 +83,7 @@ body, html {
     object-fit: cover; /* This will ensure the image covers the whole area */
     margin-right: 10px; /* Space between the image and the text */
   }
-  
+
   .price-change-positive {
     color: green;
   }
